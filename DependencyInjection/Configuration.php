@@ -20,9 +20,15 @@ class Configuration implements ConfigurationInterface
         $treeBuilder = new TreeBuilder();
         $rootNode = $treeBuilder->root('gt_auth');
 
-        // Here you should define the parameters that are allowed to
-        // configure your bundle. See the documentation linked above for
-        // more information on that topic.
+        $rootNode
+            ->children()
+                ->scalarNode('title_page')->defaultValue("Admin Authification")->end()
+                ->scalarNode('title_block')->defaultValue("Admin Plateform")->end()
+                ->scalarNode('header_tpl')->defaultValue(NULL)->end()
+                ->scalarNode('footer_tpl')->defaultValue(NULL)->end()
+                ->scalarNode('redirect_success')->cannotBeEmpty()->isRequired()->end()
+            ->end()
+        ->end();
 
         return $treeBuilder;
     }

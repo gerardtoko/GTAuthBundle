@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ title_page |trans }}</title>
+    <meta content="fr" http-equiv="content-language">
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+        <meta content="text/html; X charset=utf-8" http-equiv="Content-Type">
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+    <link rel="stylesheet" href="{{ asset("@GTAuthBundle/Resources/public/css/bootstrap.min.css") }}" />
+    <link rel="stylesheet" href="{{ asset("@GTAuthBundle/Resources/public/css/connect.css") }}" />
+    </head>
+    <body>
+        {% if header_tpl %}{% include header_tpl %}{% endif %}
+        {% block container %}{% endblock %}
+        {% if footer_tpl %}{% include footer_tpl %}{% endif %}
+    </body>
+</html>

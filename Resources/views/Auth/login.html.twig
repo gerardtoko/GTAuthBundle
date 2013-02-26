@@ -1,0 +1,20 @@
+{% extends '@GTAuthBundle/Resources/views/connect.html.twig' %}
+
+{% block container %}
+<div class="login-wrapper well-login">
+    <h3 class="login-title">{{ title_block |trans }}</h3>
+    {% if error %}
+    <div class="alert alert-error">
+	   {{ error.message|trans }}
+    </div>
+    {% endif %}
+    <form action="{{ path('gt_auth_login_check') }}" method="post">
+	<input class="input-xlarge" placeholder="{% trans %}username{% endtrans %}" type="text" id="username" name="_username" value="{{ last_username }}" />
+	<input class="input-xlarge" placeholder="{% trans %}password{% endtrans %}" type="password" id="password" name="_password" />
+	<button class="btn" type="submit">{% trans %}login{% endtrans %}</button>
+    </form>
+</div>
+<div class="logo-admin-wrapper">
+    <span class="logo-dessin-admin">{{ project_name }}</span>
+</div>
+{% endblock %}

@@ -22,6 +22,12 @@ class GTAuthExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
+        $container->setParameter('gt_auth.title_page', $config["title_page"]);
+        $container->setParameter('gt_auth.title_block', $config["title_block"]);
+        $container->setParameter('gt_auth.header_tpl', $config["header_tpl"]);
+        $container->setParameter('gt_auth.footer_tpl', $config["footer_tpl"]);
+        $container->setParameter('gt_auth.redirect_success', $config["redirect_success"]);
+
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
     }

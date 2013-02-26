@@ -1,3 +1,12 @@
-gt_auth_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: GTAuthBundle:Default:index }
+
+gt_auth_login:
+    pattern:  /login
+    defaults: { _controller: GTAuthBundle::Auth:login }
+
+gt_auth_logout:
+    pattern:  /logout
+    defaults: { _controller: GTAuthBundle::Auth:logout }
+
+gt_auth_login_check:
+    pattern:   /login_check
+
