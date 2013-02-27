@@ -1,7 +1,7 @@
 {
     "name": "gerardtoko/auth-bundle",
     "type": "symfony-bundle",
-    "description": "This Bundle assists in imagine manipulation using the imagine library",
+    "description": "Authentification AdminForm Bundle for Symfony2",
     "keywords": ["imagine", "image"],
     "homepage": "http://gerardtoko.com",
     "license": "MIT",
@@ -15,9 +15,6 @@
 
     "require": {
         "php":                      ">=5.3.2",
-        "imagine/imagine":          "0.4.*",
-        "symfony/finder":           ">=2.0.16,<2.3-dev",
-        "symfony/filesystem":       ">=2.0.16,<2.3-dev",
         "symfony/framework-bundle": ">=2.0.16,<2.3-dev"
     },
 
@@ -31,8 +28,8 @@
     },
 
     "autoload": {
-        "psr-0": { "GT\\ImagineBundle": "" }
+        "psr-0": { "GT\\AuthBundle": "" }
     },
 
-    "target-dir": "GT/ImagineBundle"
+    "target-dir": "GT/AuthBundle"
 }
