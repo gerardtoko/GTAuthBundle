@@ -2,7 +2,7 @@
     "name": "gerardtoko/auth-bundle",
     "type": "symfony-bundle",
     "description": "Authentification AdminForm Bundle for Symfony2",
-    "keywords": ["imagine", "image"],
+    "keywords": ["auth", "Symfony2"],
     "homepage": "http://gerardtoko.com",
     "license": "MIT",
     "minimum-stability": "dev",
