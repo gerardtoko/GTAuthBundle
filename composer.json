@@ -1,5 +1,5 @@
 {
-    "name": "gerardtoko/imagine-bundle",
+    "name": "gerardtoko/auth-bundle",
     "type": "symfony-bundle",
     "description": "This Bundle assists in imagine manipulation using the imagine library",
     "keywords": ["imagine", "image"],
